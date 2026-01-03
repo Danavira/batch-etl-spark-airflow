@@ -1,11 +1,11 @@
-# etl-k8s-spark-airflow
-Skeleton of an ETL pipeline, using Spark to extract, transform, and load data into a Clickhouse data warehouse, with Airflow for DAG orchestration. Run on Kubernetes using KubernetesPodOperator.
+# etl-batch-k8s-spark-airflow
+Skeleton of a batch ETL pipeline, using Spark to extract, transform, and load data into a Clickhouse data warehouse, with Airflow for DAG orchestration. Run on Kubernetes using KubernetesPodOperator.
 
 ![ETL Architecture](images/etl-k8s-flow.svg)
 
 Data source: postgresql
 
-Airflow triggers orchestration every midnight, launches driver and 5 executor instances as pods with spark image.
+Airflow triggers orchestration at daily intervals, launches driver and 5 executor instances as pods with spark image.
 
 Spark reads new data based on bookmark, transforms and loads to staging area (volume).
 
