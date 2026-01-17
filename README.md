@@ -1,5 +1,5 @@
 # Batch ETL Pipeline on Kubernetes
-Skeleton of a batch ETL using Spark to transform and load data into a Clickhouse data warehouse, with Airflow for orchestration. Run on Kubernetes using ```KubernetesPodOperator```.
+Skeleton of a batch ETL using Spark to transform and load data into a ClickHouse data warehouse, with Airflow for orchestration. Run on Kubernetes using ```KubernetesPodOperator```.
 
 ![ETL Architecture](images/etl-k8s-flow.svg)
 
@@ -36,7 +36,7 @@ Skeleton of a batch ETL using Spark to transform and load data into a Clickhouse
 - Airflow is configured to read the DAGs from the default ```/opt/airflow/dags```.
 - Connections and env variables are declared in the ```configmap.yaml```, while secrets are kept in ```secrets.yaml```.
 
-### Clickhouse
+### ClickHouse
 - A copy of ClickHouse's ```config.xml``` and ```users.xml``` is available here. The contents were copied to the ```deployment.yaml```.
 - Simple configs were ```users```, ```profiles```, ```max_memory_usage```, ```max_threads```, ```quotas```, ```grants``` and more.
 
