@@ -59,5 +59,5 @@ This was my first ever ETL solution, so pardon the inefficiencies and naiveties.
 - Add datasets from third parties to enrich data.
 - Stream logs to a metric visualizer (absolutely overkill but cool!).
 - Increase modularity of metadata config and DAG tasks.
-- Implemented log-based CDC instead of naive time-based.
+- Implemented log-based CDC instead of naive query-based CDC.
 - Better ways of handling schema evolution. 
